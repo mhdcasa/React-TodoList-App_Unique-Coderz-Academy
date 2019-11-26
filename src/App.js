@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import TodoItems from './components/TodoItems/TodoItems';
+import AddItem from './components/AddItem/AddItem';
 import './App.css';
 
 class  App extends Component {
@@ -18,7 +20,9 @@ class  App extends Component {
   render(){
     return(
     <div className="App">
-
+      <h1>Tod list App</h1>
+      <TodoItems/>
+      <AddItem/>
     </div>
   );
 
