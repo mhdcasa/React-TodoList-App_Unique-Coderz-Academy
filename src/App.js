@@ -21,7 +21,7 @@ class  App extends Component {
     return(
     <div className="App">
       <h1>Tod list App</h1>
-      <TodoItems/>
+      <TodoItems vals_array = {this.state.items} />
       <AddItem/>
     </div>
   );
