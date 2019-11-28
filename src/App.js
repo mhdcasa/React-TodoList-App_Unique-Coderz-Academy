@@ -8,10 +8,7 @@ class  App extends Component {
 
   state = {
     items : [
-      {id : 1, name:'Lobna', age : 22},
-      {id : 2, name:'Mehdi', age : 25},
-      {id : 3, name:'Aymen', age : 24},
-      {id : 4, name:'Jad', age : 24},
+
     ]
   }
 
@@ -38,13 +35,25 @@ class  App extends Component {
 
   }
 
+  // visibleMembers() {
+  //   return this.items.filter(m => m.display)
+  // }
+
+
+  addItem = (item) =>{
+    item.id= this.state.items.length+1;
+    let items = this.state.items;
+    items.push(item);
+    this.setState({items:items})
+  }
 
   render(){
     return(
-    <div className="App">
-      <h1>Tod list App</h1>
+    <div className="App container">
+      <h1 className="text-center">Tod list App</h1>
+      <p>Number of rows = {this.state.items.length}</p>
       <TodoItems vals_array = {this.state.items} deleteItem={this.deletItem} />
-      <AddItem/>
+      <AddItem addItem = {this.addItem}/>
     </div>
   );
 

@@ -14,10 +14,11 @@ const TodoItems = (props) =>{   //(props) hadi kandirha wast fonction bach njib 
             vals_array.map( val =>{
                 return (
                     <div key={val.id}>
-                        <span>{val.name}</span>
-                        <span>{val.age}</span>
+                        <span className="field_class id_field" >{val.id}</span>
+                        <span className="field_class" >{val.name}</span>
+                        <span className="field_class" >{val.age}</span>
                         {/* <span onClick={deleteItem(val.id)}>x</span>comme ca fonction ka it2éxécuta rasha pour éviter foction tdir execution tout seule kanzid arrow function */}
-                        <span onClick={()=>deleteItem(val.id)}>x</span> 
+                        <span  className="field_class id_field" onClick={()=>deleteItem(val.id)}>x</span> 
                         {/* {()=>deleteItem(val.id)} Had kitaba kat3ni dart 1 fonction sans nom o bien renommage o hadik lfonction li sans nom ghada tdir liya run l fonction deleteItem*/}
                     </div>
                 )
@@ -35,9 +36,10 @@ const TodoItems = (props) =>{   //(props) hadi kandirha wast fonction bach njib 
 
         <div className="liste_item_tale">
             <div>
-                <span>Name</span>
-                <span>Age</span>
-                <span>Action</span>
+                <span className="header">Id</span>
+                <span className="header">Name</span>
+                <span className="header">Age</span>
+                <span className="header">Action</span>
             </div>
 
             {ListeItems}

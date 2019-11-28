@@ -1,0 +1,6 @@
+.form_add_item{width: 85%;background: red;margin: auto;}
+.form_add_item input{width: 33.33%;padding: 10px;font-size: 15px;}
+.form_add_item input[type="submit"]{
+    color: #fff;
+    background: #184a52eb;
+}
